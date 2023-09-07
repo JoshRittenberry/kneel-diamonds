@@ -6,25 +6,33 @@ const transientState = {
     "metalId": 0,
     "gemSizeId": 0,
     "styleId": 0,
+    "typeId": 0,
 }
 
 // Create function to modify each property of the transientState
 
 export const setMetal = async (chosenMetal) => {
-    transientState.metal = chosenMetal
+    transientState.metalId = chosenMetal
     console.log("This is the metal T-State: " + chosenMetal)
     console.log(transientState)
 }
 
 export const setGemSize = (chosenGemSize) => {
-    transientState.gemSize = chosenGemSize
+    transientState.gemSizeId = chosenGemSize
     console.log("This is the gemSize T-State: " + chosenGemSize)
     console.log(transientState)
 }
 
 export const setStyle = (chosenStyle) => {
-    transientState.style = chosenStyle
+    transientState.styleId = chosenStyle
     console.log("This is the style T-State: " + chosenStyle)
+    console.log(transientState)
+}
+
+// Explorer Chapter Change
+export const setType = (chosenType) => {
+    transientState.typeId = chosenType
+    console.log("This is the type T-State: " + chosenType)
     console.log(transientState)
 }
 

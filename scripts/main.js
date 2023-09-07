@@ -5,6 +5,7 @@ import { getMetals } from "./metals.js"
 import { purchaseButton } from "./ordersButton.js"
 import { getCustomOrders } from "./ordersList.js"
 import { getStyles } from "./styles.js"
+import { getTypes } from "./types.js"
 
 
 // Create the DOM with a function that invokes the getMetals, getSizes, and getStyles functions
@@ -15,6 +16,7 @@ const render = async() => {
 const metalsHTML = await getMetals()
 const gemSizesHTML = await getGemSizes()
 const stylesHTML = await getStyles()
+const typesHTML = await getTypes()
 const customOrderButtonHTML = purchaseButton()
 const customOrdersListHTML = await getCustomOrders()
 
@@ -23,6 +25,7 @@ const customOrdersListHTML = await getCustomOrders()
     ${metalsHTML}
     ${gemSizesHTML}
     ${stylesHTML}
+    ${typesHTML}
     ${customOrderButtonHTML}
     ${customOrdersListHTML}
     `
